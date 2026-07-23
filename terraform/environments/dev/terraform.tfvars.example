@@ -22,3 +22,16 @@ app_subnet_address_prefixes = ["10.10.2.0/24"]
 
 private_endpoint_subnet_name             = "private-endpoint-subnet"
 private_endpoint_subnet_address_prefixes = ["10.10.3.0/24"]
+
+aks_name           = "enterprise-idp-dev-aks"
+aks_dns_prefix     = "enterprise-idp-dev"
+aks_node_vm_size   = "Standard_D2s_v3"
+aks_min_node_count = 1
+aks_max_node_count = 1
+
+acr_name = "enterpriseidpacr"
+acr_sku  = "Basic"
+key_vault_name                 = "enterprise-idp-kv-1234"
+workload_identity_name         = "enterprise-idp-dev-workload-id"
+kubernetes_namespace           = "platform"
+kubernetes_service_account_name = "platform-workload"

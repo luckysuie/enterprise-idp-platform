@@ -79,3 +79,66 @@ variable "private_endpoint_subnet_address_prefixes" {
   description = "Address prefixes for the private endpoint subnet"
   type        = list(string)
 }
+
+
+
+variable "aks_name" {
+  description = "Name of the AKS cluster"
+  type        = string
+}
+
+variable "aks_dns_prefix" {
+  description = "DNS prefix for the AKS cluster"
+  type        = string
+}
+
+variable "aks_node_vm_size" {
+  description = "VM size for AKS nodes"
+  type        = string
+  default     = "Standard_D2s_v5"
+}
+
+variable "aks_min_node_count" {
+  description = "Minimum number of AKS nodes"
+  type        = number
+  default     = 1
+}
+
+variable "aks_max_node_count" {
+  description = "Maximum number of AKS nodes"
+  type        = number
+  default     = 3
+}
+
+variable "acr_name" {
+  description = "Azure Container Registry name"
+  type        = string
+}
+
+variable "acr_sku" {
+  description = "Azure Container Registry SKU"
+  type        = string
+  default     = "Basic"
+}
+
+variable "key_vault_name" {
+  description = "Azure Key Vault name"
+  type        = string
+}
+
+variable "workload_identity_name" {
+  description = "Workload user-assigned managed identity name"
+  type        = string
+}
+
+variable "kubernetes_namespace" {
+  description = "Kubernetes namespace for the platform workload"
+  type        = string
+  default     = "platform"
+}
+
+variable "kubernetes_service_account_name" {
+  description = "Kubernetes service account for Workload Identity"
+  type        = string
+  default     = "platform-workload"
+}
