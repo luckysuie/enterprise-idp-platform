@@ -10,3 +10,15 @@ tags = {
   ManagedBy   = "Terraform"
   Owner       = "Platform-Engineering"
 }
+
+vnet_name          = "enterprise-idp-dev-vnet"
+vnet_address_space = ["10.10.0.0/16"]
+
+aks_subnet_name             = "aks-subnet"
+aks_subnet_address_prefixes = ["10.10.1.0/24"]
+
+app_subnet_name             = "app-subnet"
+app_subnet_address_prefixes = ["10.10.2.0/24"]
+
+private_endpoint_subnet_name             = "private-endpoint-subnet"
+private_endpoint_subnet_address_prefixes = ["10.10.3.0/24"]
