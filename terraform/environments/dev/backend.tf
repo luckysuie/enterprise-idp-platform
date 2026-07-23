@@ -1,0 +1,9 @@
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "idp-tfstate-rg"
+    storage_account_name = "idptfstate807622"
+    container_name       = "tfstate"
+    key                  = "dev/terraform.tfstate"
+    use_azuread_auth     = true
+  }
+}

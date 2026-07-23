@@ -1,0 +1,12 @@
+subscription_id    = "00000000-0000-0000-0000-0000000000000000000"
+location           = "Central India"
+environment        = "dev"
+project_name       = "enterprise-idp"
+resource_group_name = "enterprise-idp-dev-rg"
+
+tags = {
+  Project     = "Enterprise-IDP"
+  Environment = "Development"
+  ManagedBy   = "Terraform"
+  Owner       = "Platform-Engineering"
+}
