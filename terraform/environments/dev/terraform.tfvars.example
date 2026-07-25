@@ -35,3 +35,9 @@ key_vault_name                 = "enterprise-idp-kv-1234"
 workload_identity_name         = "enterprise-idp-dev-workload-id"
 kubernetes_namespace           = "platform"
 kubernetes_service_account_name = "platform-workload"
+
+log_analytics_workspace_name = "enterprise-idp-dev-law"
+application_insights_name    = "enterprise-idp-dev-appinsights"
+log_retention_in_days        = 30
+
+azure_monitor_workspace_name = "enterprise-idp-monitor"

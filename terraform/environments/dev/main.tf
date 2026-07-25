@@ -33,11 +33,12 @@ module "network" {
 module "aks" {
   source = "../../modules/aks"
 
-  aks_name            = var.aks_name
-  location            = module.resource_group.resource_group_location
-  resource_group_name = module.resource_group.resource_group_name
-  dns_prefix          = var.aks_dns_prefix
-  aks_subnet_id       = module.network.aks_subnet_id
+  aks_name                   = var.aks_name
+  location                   = module.resource_group.resource_group_location
+  log_analytics_workspace_id = module.monitoring.log_analytics_workspace_id
+  resource_group_name        = module.resource_group.resource_group_name
+  dns_prefix                 = var.aks_dns_prefix
+  aks_subnet_id              = module.network.aks_subnet_id
 
   node_vm_size   = var.aks_node_vm_size
   min_node_count = var.aks_min_node_count
@@ -74,6 +75,28 @@ module "key_vault" {
   workload_identity_name          = var.workload_identity_name
   kubernetes_namespace            = var.kubernetes_namespace
   kubernetes_service_account_name = var.kubernetes_service_account_name
+
+  tags = var.tags
+}
+
+module "monitoring" {
+  source = "../../modules/monitoring"
+
+  log_analytics_workspace_name = var.log_analytics_workspace_name
+  application_insights_name    = var.application_insights_name
+  resource_group_name          = module.resource_group.resource_group_name
+  location                     = module.resource_group.resource_group_location
+  retention_in_days            = var.log_retention_in_days
+
+  tags = var.tags
+}
+
+module "azure_monitor_workspace" {
+  source = "../../modules/azure-monitor-workspace"
+
+  azure_monitor_workspace_name = var.azure_monitor_workspace_name
+  resource_group_name          = module.resource_group.resource_group_name
+  location                     = module.resource_group.resource_group_location
 
   tags = var.tags
 }

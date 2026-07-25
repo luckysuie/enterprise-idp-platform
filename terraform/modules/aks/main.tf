@@ -23,6 +23,16 @@ resource "azurerm_kubernetes_cluster" "this" {
     type = "SystemAssigned"
   }
 
+
+
+
+
+  oms_agent {
+    log_analytics_workspace_id      = var.log_analytics_workspace_id
+    msi_auth_for_monitoring_enabled = true
+  }
+
+
   network_profile {
     network_plugin      = "azure"
     network_plugin_mode = "overlay"
@@ -38,3 +48,5 @@ resource "azurerm_kubernetes_cluster" "this" {
 
   tags = var.tags
 }
+
+

@@ -1,6 +1,6 @@
 
 BACKEND_RG="idp-tfstate-rg"
-STORAGE_ACCOUNT="idptfstate807622"
+STORAGE_ACCOUNT="idptfstate995756"
 
 
 

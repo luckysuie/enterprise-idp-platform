@@ -78,3 +78,24 @@ output "key_vault_uri" {
 output "workload_identity_client_id" {
   value = module.key_vault.workload_identity_client_id
 }
+
+output "log_analytics_workspace_name" {
+  description = "Name of the Log Analytics Workspace"
+  value       = module.monitoring.log_analytics_workspace_name
+}
+
+output "log_analytics_workspace_id" {
+  description = "ID of the Log Analytics Workspace"
+  value       = module.monitoring.log_analytics_workspace_id
+}
+
+output "application_insights_name" {
+  description = "Name of Application Insights"
+  value       = module.monitoring.application_insights_name
+}
+
+output "application_insights_connection_string" {
+  description = "Application Insights connection string"
+  value       = module.monitoring.application_insights_connection_string
+  sensitive   = true
+}
