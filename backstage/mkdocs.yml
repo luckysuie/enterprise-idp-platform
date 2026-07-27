@@ -2,6 +2,10 @@ site_name: Enterprise Internal Developer Platform
 
 nav:
   - Home: index.md
+  - Project Overview: project-overview.md
+  - Architecture: architecture.md
+  - Repository Structure: repository-structure.md
+  - Developer Onboarding: onboarding.md
 
 plugins:
   - techdocs-core
