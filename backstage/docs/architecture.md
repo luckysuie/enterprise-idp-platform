@@ -1,3 +1,49 @@
+
+# Enterprise Internal Developer Platform Architecture
+
+## High-Level Architecture
+
+![Enterprise IDP Architecture](images/architecture.png)
+
+---
+
+## Components
+
+### Backstage
+
+Acts as the central developer portal.
+
+### GitHub
+
+Stores application source code and catalog metadata.
+
+### Azure DevOps
+
+Executes enterprise CI/CD pipelines.
+
+### Azure Kubernetes Service
+
+Runs containerized applications.
+
+### Azure Container Registry
+
+Stores Docker images.
+
+### Terraform
+
+Automates Azure infrastructure provisioning.
+
+### Azure Key Vault
+
+Stores application secrets securely.
+
+### Azure Monitor
+
+Provides monitoring and observability.
+
+
+
+
 # Platform Architecture
 
 ## High-Level Architecture
