@@ -1,0 +1,7 @@
+site_name: Enterprise Internal Developer Platform
+
+nav:
+  - Home: index.md
+
+plugins:
+  - techdocs-core
